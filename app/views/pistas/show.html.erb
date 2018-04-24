@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @pista.numero %>
+</p>
+
+<p>
+  <strong>Localizacao:</strong>
+  <%= @pista.localizacao %>
+</p>
+
+<p>
+  <strong>Pontos:</strong>
+  <%= @pista.pontos %>
+</p>
+
+<%= link_to 'Edit', edit_pista_path(@pista) %> |
+<%= link_to 'Back', pistas_path %>

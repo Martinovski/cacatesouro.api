@@ -1,0 +1,32 @@
+<%= form_with(model: pista, local: true) do |form| %>
+  <% if pista.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pista.errors.count, "error") %> prohibited this pista from being saved:</h2>
+
+      <ul>
+      <% pista.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localizacao %>
+    <%= form.text_field :localizacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pontos %>
+    <%= form.text_field :pontos %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

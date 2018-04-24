@@ -1,0 +1,2 @@
+class Pista < ApplicationRecord
+end

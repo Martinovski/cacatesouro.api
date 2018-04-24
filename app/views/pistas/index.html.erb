@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pistas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+      <th>Localizacao</th>
+      <th>Pontos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pistas.each do |pista| %>
+      <tr>
+        <td><%= pista.numero %></td>
+        <td><%= pista.localizacao %></td>
+        <td><%= pista.pontos %></td>
+        <td><%= link_to 'Show', pista %></td>
+        <td><%= link_to 'Edit', edit_pista_path(pista) %></td>
+        <td><%= link_to 'Destroy', pista, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pista', new_pista_path %>
